@@ -96,6 +96,11 @@ const UnicodeChar2num = {
 /** 允许使用的字符集合 */
 const charKeys = Object.keys(UnicodeChar2num);
 
+/**
+ * 校验统一社会信用代码
+ * @param {string} unicode 统一社会信用代码
+ * @returns 
+ */
 export const isUnicode = (unicode) => {
   // 校验是否为字符串
   if (typeof unicode !== "string") {
@@ -144,3 +149,6 @@ export const isUnicode = (unicode) => {
     
   return checkCode === UnicodeChar2num[unicode[17]];
 };
+
+
+export default isUnicode
